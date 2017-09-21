@@ -1,0 +1,99 @@
+@import "./global-styles.css";
+
+html{
+  position:relative;
+  min-height: 100%;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin-bottom:100px;/* Height of footer*/
+  overflow-x:hidden !important;
+}
+
+.notification {
+  overflow: hidden;
+}
+
+.no-padding {
+  padding:0px !important;
+}
+
+/* overrides for notification so that we can control width and show more info */
+.simple-notification-wrapper {
+  width: initial !important;
+  max-width: 50% !important;
+}
+
+.simple-notification .sn-title {
+  font-family: "MuseoSans300", sans-serif;
+  font-size: 16px !important;
+  line-height: initial !important;
+}
+
+.simple-notification .sn-content {
+  font-size: 14px !important;
+  line-height: initial !important;
+}
+
+.nav-link {
+  font-family: 'MuseoSans300', sans-serif;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.alert {
+  font-family: 'MuseoSans300', sans-serif !important;
+  padding: 8px;
+}
+
+.popover {
+  max-width: 320px !important;
+}
+
+.card {
+  margin-top:0px !important;
+}
+
+.expand-icons-right {
+  background: url(../../lib/integralui/resources/expandbox-icons.png) no-repeat 0 0;
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  padding: 0;
+  margin: 3px 0 0 0;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.next {
+  opacity: 0.25 !important;
+}
+
+.iui-treelistitem:hover .next {
+  opacity: 1 !important;
+}
+
+.iui-treelist {
+  min-height: inherit;
+  background: white !important;
+  border: none !important;
+  padding: 0px !important;
+  overflow-y: auto !important;
+  width: inherit;
+  padding-left: 5px;
+}
+
+.form-content {
+  & .iui-treelist-header {
+    margin: 0;
+  }
+}
+

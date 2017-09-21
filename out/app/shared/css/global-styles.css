@@ -1,0 +1,473 @@
+/* global styles go here */
+:root {
+  --large-font: 50px;
+  --complex: {
+    color: orange;
+    font-size: 8px;
+  };
+
+  --gray100: #E2E2E2;
+  --gray200: #a9a9a9;
+  --gray300: #333232;
+  --gray400: #1a1919;
+
+  --green100: #bda869;
+
+  --yellow100: #e7e141;
+
+  --red100: #fb6064;
+
+  --blue200: #3999ca;
+  --blue400: #3e0830;
+
+  --black900: #000000;
+  --white100: #FFFFFF;
+
+  /* BF logo colors */
+  --bf-blue100: #61ffff;
+  --bf-blue200: #00b1ef;
+  --bf-yellow100: #76d371;
+  --bf-red100: #f05103;
+  --bf-red200: #e42029;
+
+  --h1: {
+    font-family: 'MuseoSans300', sans-serif;
+    font-size: 36px;
+    margin: 0 0 20px 0;
+  };
+
+  --text-14: {
+    font-size: 14px;
+    color: black;
+  };
+
+  --content: {
+    padding: 10px 10px 10px 15px;
+    background: #E5E6EB;
+
+    & h3 {
+      &.box-title {
+        font-family: 'MuseoSans700', sans-serif;
+      }
+    }
+  };
+
+  --input: {
+    font-size: 14px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: 1px solid var(--gray200);
+  };
+
+  --button: {
+    background-color: var(--green100);
+    color: white;
+    font-family: 'MuseoSans300', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+    cursor: pointer;
+
+    &:disabled,
+    &[disabled] {
+      border: 1px solid #cccccc;
+      background-color: #cccccc;
+      color: #666666;
+    }
+  };
+
+  --buttonHover: {
+    background-color: color(var(--green100) blackness(10%));
+
+    &:disabled,
+    &[disabled] {
+      border: 1px solid #cccccc;
+      background-color: #cccccc;
+      color: #666666;
+    }
+  };
+
+  --datatable: {
+    & th {
+      font-family: 'MuseoSans300', sans-serif;
+    }
+  };
+
+  --paginationWrapper: {
+    padding: 10px;
+    text-align: right;
+  }
+}
+
+/*  TODO: refactor this so that the font is just a single lib for icons and museo global doesn't break them, then remove as fallbacks */
+* {
+  /* Note: global override all fonts to default to museo300 unless otherwise specified, FontAwesome as secondary fallback for icons. */
+  font-family: 'MuseoSans300', sans-serif, FontAwesome, 'Glyphicons Halflings' /* messages icons */;
+}
+
+p {
+  @apply --text-14;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply --h1;
+}
+
+label {
+  & input {
+    @apply --input;
+  }
+
+  & textarea {
+    @apply --input;
+  }
+}
+
+label { /* ovveride bootstrap styles */
+  font-weight: bold !important;
+  font-family: 'MuseoSans300', sans-serif;
+  display: initial;
+  max-width: initial;
+  margin-bottom: initial;
+}
+
+table {
+  width: 90%;
+
+  & th {
+    font-family: 'MuseoSans300', sans-serif;
+  }
+
+  & td {
+    border-bottom: 1px solid #ddd;
+
+    &.noborder {
+      border: none;
+    }
+  }
+
+  & tr, & td {
+    font-family: 'MuseoSans300', sans-serif;
+  }
+}
+
+.confirm-popup-footer {
+  text-align: right;
+  padding-top: 5px;
+}
+
+
+/* override ngx dropdownmenu */
+.dropdown-menu {
+  max-height: 500px;
+  overflow: auto;
+}
+/*
+    component: Boxes
+-------------------------
+*/
+.box {
+  position: relative;
+  background: #ffffff;
+  margin-bottom: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.box.box-primary {
+  border-top-color: #3c8dbc;
+}
+.box.box-info {
+  border-top-color: #00c0ef;
+}
+.box.box-danger {
+  border-top-color: #f56954;
+}
+.box.box-warning {
+  border-top-color: #f39c12;
+}
+.box.box-success {
+  border-top-color: #00a65a;
+}
+.box.height-control .box-body {
+  max-height: 300px;
+  overflow: auto;
+}
+.box .box-header {
+  position: relative;
+  /*
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 0px solid #f4f4f4;
+  */
+  color: #444;
+  /*padding-bottom: 10px;*/
+}
+.box .box-header:before,
+.box .box-header:after {
+  display: table;
+  content: " ";
+}
+.box .box-header:after {
+  clear: both;
+}
+.box .box-header > .fa,
+.box .box-header > .glyphicon,
+.box .box-header > .ion,
+.box .box-header .box-title {
+   display: inline-block;
+   padding: 10px 0px 10px 10px;
+   margin: 0;
+   font-size: 20px;
+   font-weight: 400;
+   float: left;
+   cursor: default;
+ }
+.box .box-header .general-title {
+  padding: 10px 0px 10px 10px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  float: left;
+  cursor: default;
+}
+.box .box-header a {
+  color: #444;
+}
+.box .box-header > .box-tools {
+  padding: 5px 10px 5px 5px;
+}
+.box .box-body {
+  padding: 10px;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  overflow:auto;
+}
+.box .box-body > table,
+.box .box-body > .table {
+  margin-bottom: 0;
+}
+.box .box-body.chart-responsive {
+  width: 100%;
+  overflow: hidden;
+}
+.box .box-body > .chart {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.box .box-body > .chart svg,
+.box .box-body > .chart canvas {
+  width: 100%!important;
+}
+.box .box-body .fc {
+  margin-top: 5px;
+}
+.box .box-body .fc-header-title h2 {
+  font-size: 15px;
+  line-height: 1.6em;
+  color: #666;
+  margin-left: 10px;
+}
+.box .box-body .fc-header-right {
+  padding-right: 10px;
+}
+.box .box-body .fc-header-left {
+  padding-left: 10px;
+}
+.box .box-body .fc-widget-header {
+  background: #fafafa;
+  box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.02);
+}
+.box .box-body .fc-grid {
+  width: 100%;
+  border: 0;
+}
+.box .box-body .fc-widget-header:first-of-type,
+.box .box-body .fc-widget-content:first-of-type {
+  border-left: 0;
+  border-right: 0;
+}
+.box .box-body .fc-widget-header:last-of-type,
+.box .box-body .fc-widget-content:last-of-type {
+  border-right: 0;
+}
+.box .box-body .table {
+  margin-bottom: 0;
+}
+.box .box-body .full-width-chart {
+  margin: -19px;
+}
+.box .box-body.no-padding .full-width-chart {
+  margin: -9px;
+}
+.box .box-footer {
+  border-top: 1px solid #f4f4f4;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.box.box-solid {
+  border-top: 0px;
+}
+.box.box-solid > .box-header {
+  padding-bottom: 0px!important;
+}
+.box.box-solid > .box-header .btn.btn-default {
+  background: transparent;
+}
+.box.box-solid.box-primary > .box-header {
+  color: #fff;
+  background: #3c8dbc;
+  background-color: #3c8dbc;
+}
+.box.box-solid.box-primary > .box-header a {
+  color: #444;
+}
+.box.box-solid.box-info > .box-header {
+  color: #fff;
+  background: #00c0ef;
+  background-color: #00c0ef;
+}
+.box.box-solid.box-info > .box-header a {
+  color: #444;
+}
+.box.box-solid.box-danger > .box-header {
+  color: #fff;
+  background: #f56954;
+  background-color: #f56954;
+}
+.box.box-solid.box-danger > .box-header a {
+  color: #444;
+}
+.box.box-solid.box-warning > .box-header {
+  color: #fff;
+  background: #f39c12;
+  background-color: #f39c12;
+}
+.box.box-solid.box-warning > .box-header a {
+  color: #444;
+}
+.box.box-solid.box-success > .box-header {
+  color: #fff;
+  background: #00a65a;
+  background-color: #00a65a;
+}
+.box.box-solid.box-success > .box-header a {
+  color: #444;
+}
+.box.box-solid > .box-header > .box-tools > .btn {
+  border: 0;
+  box-shadow: none;
+}
+.box.box-solid.collapsed-box .box-header {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.box.box-solid[class*='bg'] > .box-header {
+  color: #fff;
+}
+.box .box-group > .box {
+  margin-bottom: 5px;
+}
+
+.slide.ng-enter, .slide.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+}
+
+.slide.ng-enter {  }        /* starting animations for enter */
+.slide.ng-enter-active { } /* terminal animations for enter */
+.slide.ng-leave { }        /* starting animations for leave */
+.slide.ng-leave-active { } /* terminal animations for leave */
+
+.wrap {
+   white-space: pre-wrap;      /* CSS3 */
+   white-space: -moz-pre-wrap; /* Firefox */
+   white-space: -pre-wrap;     /* Opera <7 */
+   white-space: -o-pre-wrap;   /* Opera 7 */
+   word-wrap: break-word;      /* IE */
+}
+.greenCheck{
+  color: #3e8f3e;
+}
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand.
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.table-width-full{
+  width:100% !important;
+}
+.table-header {
+  background: #e9e9e9; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, white, #e9e9e9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, white, #e9e9e9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, white, #e9e9e9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, white, #e9e9e9); /* Standard syntax */
+}

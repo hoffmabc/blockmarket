@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blockmarket Desktop</title>
+    <base href="./">
+
+    <link rel="shortcut icon" href="shared/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="shared/images/favicon.ico" type="image/x-icon">
+
+    <!--- bootstrap theme -->
+    <link rel="stylesheet" href="https://npmcdn.com/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <!-- style overrides -->
+    <link rel="stylesheet" href="app/shared/css/global-overrides.css">
+
+</head>
+<body>
+
+<app>
+    old loader
+</app>
+
+<div id="loading-container">
+    <!--
+          Anything inside the <app> component content-area will be automatically
+          replaced with the "template" (associated with the <app> component) once
+          the application is bootstrapped. The upside of this is that it just happens
+          automatically. The downside of this is that the content instantaneously
+          disappears once the application has been bootstrapped.
+      -->
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'MuseoSans300';
+            src: url("app/shared/fonts/MuseoSans300.otf") format("opentype");
+        }
+
+        #loading-container {
+            background-color: #262626;
+            bottom: 0px;
+            left: 0px;
+            position: fixed;
+            right: 0px;
+            top: 0px;
+            z-index: 999999;
+            transition: opacity 3ms ease-in-out;
+            opacity: 1;
+        }
+
+        #loading-container div.messaging {
+            text-align: center;
+        }
+
+        #loading-container.loaded {
+            opacity: 0;
+        }
+
+        #loading {
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -100px 0 0 -250px;
+        }
+
+        #loading h1 {
+            color: #FFFFFF;
+            font-family: 'MuseoSans300', sans-serif;
+            font-size: 26px;
+            line-height: 35px;
+            margin: 0px 0px 20px 0px;
+        }
+
+        #loading p {
+            color: #FFFFFF;
+            font-family: 'MuseoSans300', sans-serif;
+            font-size: 18px;
+            line-height: 14px;
+            margin: 0px 0px 0px 0px;
+        }
+    </style>
+
+    <div id="loading">
+        <div class="messaging">
+            <img src="shared/images/loading_gears.svg"/>
+            <h1>Blockmarket Desktop Loading</h1>
+            <p>
+                v1.0.0
+            </p>
+        </div>
+    </div>
+</div>
+
+<script async src="main.bundle.js"></script>
+<script>
+  ipc = require('electron').ipcRenderer;
+  remote = require('electron').remote;
+
+  window.config = remote.getGlobal('blockmarket').config;
+
+  document.addEventListener('quitBM', function () {
+    ipc.send('quitBM');
+  }, false);
+
+  //  document.addEventListener('relaunchBM', function() {
+  //    ipc.send('relaunchBM');
+  //  }, false);
+
+  document.addEventListener('dragover', function (event) {
+    event.preventDefault();
+    return false;
+  }, false);
+
+  document.addEventListener('drop', function (event) {
+    event.preventDefault();
+    return false;
+  }, false);
+</script>
+</body>
+</html>

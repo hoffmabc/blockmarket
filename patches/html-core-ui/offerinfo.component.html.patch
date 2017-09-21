@@ -1,0 +1,13 @@
+diff --git src/app/offers/offerinfo/offerinfo.component.html src/app/offers/offerinfo/offerinfo.component.html
+index 337a9fc..5483ec5 100644
+--- src/app/offers/offerinfo/offerinfo.component.html
++++ src/app/offers/offerinfo/offerinfo.component.html
+@@ -43,7 +43,7 @@
+ 
+                 <div class="action">
+                   <button type="submit" >Buy Now</button>&nbsp;&nbsp;
+-                  <span [ngClass]="{'inline-loading': true, 'visible': requestInProgress}"><img width="20" src="../../shared/images/inline-loading.svg"/> Waiting for confirms, typically takes 60 seconds</span>
++                  <span [ngClass]="{'inline-loading': true, 'visible': requestInProgress}"><img width="20" src="../../../../shared/images/inline-loading.svg"/> Waiting for confirms, typically takes 60 seconds</span>
+                 </div>
+               </div>
+             </form>

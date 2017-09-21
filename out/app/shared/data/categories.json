@@ -1,0 +1,304 @@
+[{
+  "text": "For Sale",
+  "icon": "fa fa-fw fa-lg fa-shopping-cart",
+  "items": [{
+    "text": "Alternatives",
+    "cat": "For Sale > Alternatives",
+    "icon": "fa fa-fw fa-lg fa-shopping-cart"
+  }, {
+    "text": "Antiques",
+    "cat": "For Sale > Antiques",
+    "icon": "fa fa-fw fa-lg fa-shopping-cart"
+  }, {
+    "text": "Appliances",
+    "cat": "For Sale > Appliances",
+    "icon": "fa fa-fw fa-lg fa-shopping-cart"
+  }, {
+    "text": "Arts/Crafts",
+    "cat": "For Sale > Arts/Crafts",
+    "icon": "fa fa-fw fa-lg fa-scissors"
+  },
+    {
+      "text": "Auto/Vehicle",
+      "cat": "Auto/Vehicle",
+      "icon": "fa fa-fw fa-lg fa-car",
+      "items": [{
+        "text": "ATVs/UTV/Snow",
+        "cat": "For Sale > ATVs/UTV/Snow",
+        "icon": "fa fa-fw fa-lg fa-shopping-cart"
+      }, {
+        "text": "Boats",
+        "cat": "For Sale > Boats",
+        "icon": "fa fa-fw fa-lg fa-ship"
+      }, {
+        "text": "Cars/Trucks",
+        "cat": "For Sale > Cars/Trucks",
+        "icon": "fa fa-fw fa-lg fa-car"
+      }, {
+        "text": "Motorcycles",
+        "cat": "For Sale > Motorcycles",
+        "icon": "fa fa-fw fa-lg fa-motorcycle"
+      }, {
+        "text": "RVs/campers",
+        "cat": "For Sale > RVs/campers",
+        "icon": "fa fa-fw fa-lg fa-truck"
+      }]
+    },
+    {
+      "text": "Baby/Kid",
+      "cat": "For Sale > Baby/Kid",
+      "icon": "fa fa-fw fa-lg fa-child"
+    }, {
+      "text": "Beauty/Health",
+      "cat": "For Sale > Beauty/Health",
+      "icon": "fa fa-fw fa-lg fa-heartbeat"
+    }, {
+      "text": "Books",
+      "cat": "For Sale > Books",
+      "icon": "fa fa-fw fa-lg fa-book"
+    }, {
+      "text": "Bicycles",
+      "cat": "For Sale > Bicycles",
+      "icon": "fa fa-fw fa-lg fa-bicycle"
+    }, {
+      "text": "Business",
+      "cat": "For Sale > Business",
+      "icon": "fa fa-fw fa-lg fa-building"
+    }, {
+      "text": "CDs/DVDs/VHS",
+      "cat": "For Sale > CDs/DVDs/VHS",
+      "icon": "fa fa-fw fa-lg fa-film"
+    }, {
+      "text": "Clothing/Accessories",
+      "cat": "For Sale > Clothing/Accessories",
+      "icon": "fa fa-fw fa-lg fa-shopping-cart"
+    }, {
+      "text": "Collectibles",
+      "cat": "For Sale > Collectibles",
+      "icon": "fa fa-fw fa-lg fa-shopping-cart"
+    }, {
+      "text": "Cryptocurrency",
+      "cat": "For Sale > Cryptocurrency",
+      "icon": "fa fa-fw fa-lg fa-money",
+      "items": [{
+        "text": "BTC",
+        "cat": "For Sale > Cryptocurrency > BTC",
+        "icon": "fa fa-fw fa-lg fa-btc",
+        "items": [{
+          "text": "Cash",
+          "cat": "For Sale > Cryptocurrency > BTC > Cash",
+          "icon": "fa fa-fw fa-lg fa-money"
+        }, {
+          "text": "Gift Card",
+          "cat": "For Sale > Cryptocurrency > BTC > Gift Card",
+          "icon": "fa fa-fw fa-lg fa-gift"
+        }, {
+          "text": "Interac",
+          "cat": "For Sale > Cryptocurrency > BTC > Interac",
+          "icon": "fa fa-fw fa-lg fa-credit-card-alt"
+        }, {
+          "text": "Bank Transfer",
+          "cat": "For Sale > Cryptocurrency > BTC > Bank Transfer",
+          "icon": "fa fa-fw fa-lg fa-bank"
+        }]
+      }, {
+        "text": "SYS",
+        "cat": "For Sale > Cryptocurrency > SYS",
+        "icon": "fa fa-fw fa-lg fa-money",
+        "items": [{
+          "text": "Cash",
+          "cat": "For Sale > Cryptocurrency > SYS > Cash",
+          "icon": "fa fa-fw fa-lg fa-money"
+        }, {
+          "text": "Gift Card",
+          "cat": "For Sale > Cryptocurrency > SYS > Gift Card",
+          "icon": "fa fa-fw fa-lg fa-gift"
+        }, {
+          "text": "Interac",
+          "cat": "For Sale > Cryptocurrency > SYS > Interac",
+          "icon": "fa fa-fw fa-lg fa-credit-card-alt"
+        }, {
+          "text": "Bank Transfer",
+          "cat": "For Sale > Cryptocurrency > SYS > Bank Transfer",
+          "icon": "fa fa-fw fa-lg fa-bank"
+        }]
+      }]
+    }, {
+      "text": "Electronics",
+      "cat": "For Sale > Electronics",
+      "icon": "fa fa-fw fa-lg fa-tv"
+    }, {
+      "text": "Food&Drink",
+      "cat": "For Sale > Food&Drink",
+      "icon": "fa fa-fw fa-lg fa-beer"
+    }, {
+      "text": "Furniture",
+      "cat": "For Sale > Furniture",
+      "icon": "fa fa-fw fa-lg fa-bed"
+    }, {
+      "text": "Jewelry",
+      "cat": "For Sale > Jewelry",
+      "icon": "fa fa-fw fa-lg fa-diamond"
+    }, {
+      "text": "Medicinal",
+      "cat": "For Sale > Medicinal",
+      "icon": "fa fa-fw fa-lg fa-user-md"
+    }, {
+      "text": "Musical Instruments",
+      "cat": "For Sale > Musical Instruments",
+      "icon": "fa fa-fw fa-lg fa-music"
+    }, {
+      "text": "Outdoors",
+      "cat": "For Sale > Outdoors",
+      "icon": "fa fa-fw fa-lg fa-tree",
+      "items": [{
+        "text": "BBQs/Grills",
+        "cat": "For Sale > Outdoors > BBQs/Grills",
+        "icon": "fa fa-fw fa-lg fa-fire"
+      }, {
+        "text": "Gardening",
+        "cat": "For Sale > Outdoors > Gardening",
+        "icon": "fa fa-fw fa-lg fa-tree"
+      }, {
+        "text": "Lawnnmowers",
+        "cat": "For Sale > Outdoors > Lawnnmowers",
+        "icon": "fa fa-fw fa-lg fa-tree"
+      }]
+    }, {
+      "text": "Photo/Video",
+      "cat": "For Sale > Photo/Video",
+      "icon": "fa fa-fw fa-lg fa-file-video-o"
+    }, {
+      "text": "Tickets",
+      "cat": "For Sale > Tickets",
+      "icon": "fa fa-fw fa-lg fa-ticket"
+    }, {
+      "text": "Tools/Power Equipment",
+      "cat": "For Sale > Tools/Power Equipment",
+      "icon": "fa fa-fw fa-lg fa-wrench"
+    }, {
+      "text": "Toys/Games",
+      "cat": "For Sale > Toys/Games",
+      "icon": "fa fa-fw fa-lg fa-gamepad"
+    }
+  ]
+}, {
+  "text": "Services",
+  "icon": "fa fa-fw fa-lg fa-handshake-o",
+  "items": [{
+    "text": "Art/Media/Design",
+    "cat": "Services > Art/Media/Design",
+    "icon": "fa fa-fw fa-lg fa-paint-brush"
+  }, {
+    "text": "Legal/Paralegal",
+    "cat": "Services > Legal/Paralegal",
+    "icon": "fa fa-fw fa-lg fa-legal"
+  }, {
+    "text": "General Labor",
+    "cat": "Services > General Labor",
+    "icon": "fa fa-fw fa-lg fa-handshake-o"
+  }, {
+    "text": "Manufacturing",
+    "cat": "Services > Manufacturing",
+    "icon": "fa fa-fw fa-lg fa-building"
+  }, {
+    "text": "Marketing/PR/Ad",
+    "cat": "Services > Marketing/PR/Ad",
+    "icon": "fa fa-fw fa-lg fa-handshake-o"
+  }, {
+    "text": "Software/Systems",
+    "cat": "Services > Software/Systems",
+    "icon": "fa fa-fw fa-lg fa-handshake-o"
+  }, {
+    "text": "TV/Film/Video",
+    "cat": "Services > TV/Film/Video",
+    "icon": "fa fa-fw fa-lg fa-film"
+  }, {
+    "text": "Writing/Editing",
+    "cat": "Services > Writing/Editing",
+    "icon": "fa fa-fw fa-lg fa-edit"
+  }, {
+    "text": "Other",
+    "cat": "Services > Other",
+    "icon": "fa fa-fw fa-lg fa-handshake-o"
+  }]
+}, {
+  "text": "Wanted",
+  "icon": "fa fa-fw fa-lg fa-heart",
+  "items": [{
+    "text": "Cryptocurrency",
+    "cat": "Wanted > Cryptocurrency",
+    "icon": "fa fa-fw fa-lg fa-money",
+    "items": [{
+      "text": "BTC",
+      "cat": "Wanted > Cryptocurrency > BTC",
+      "icon": "fa fa-fw fa-lg fa-btc",
+      "items": [{
+        "text": "Cash",
+        "cat": "Wanted > Cryptocurrency > BTC > Cash",
+        "icon": "fa fa-fw fa-lg fa-money"
+      }, {
+        "text": "Gift Card",
+        "cat": "Wanted > Cryptocurrency > BTC > Gift Card",
+        "icon": "fa fa-fw fa-lg fa-gift"
+      }, {
+        "text": "Interac",
+        "cat": "Wanted > Cryptocurrency > BTC > Interac",
+        "icon": "fa fa-fw fa-lg fa-credit-card-alt"
+      }, {
+        "text": "Bank Transfer",
+        "cat": "Wanted > Cryptocurrency > BTC > Bank Transfer",
+        "icon": "fa fa-fw fa-lg fa-bank"
+      }]
+    }, {
+      "text": "SYS",
+      "cat": "Wanted > Cryptocurrency > SYS",
+      "icon": "fa fa-fw fa-lg fa-money",
+      "items": [{
+        "text": "Cash",
+        "cat": "Wanted > Cryptocurrency > SYS > Cash",
+        "icon": "fa fa-fw fa-lg fa-money"
+      }, {
+        "text": "Gift Card",
+        "cat": "Wanted > Cryptocurrency > SYS > Gift Card",
+        "icon": "fa fa-fw fa-lg fa-gift"
+      }, {
+        "text": "Interac",
+        "cat": "Wanted > Cryptocurrency > SYS > Interac",
+        "icon": "fa fa-fw fa-lg fa-credit-card-alt"
+      }, {
+        "text": "Bank Transfer",
+        "cat": "Wanted > Cryptocurrency > SYS > Bank Transfer",
+        "icon": "fa fa-fw fa-lg fa-bank"
+      }]
+    }]
+  }]
+}, {
+  "text": "Certificates",
+  "icon": "fa fa-fw fa-lg fa-certificate",
+  "items": [{
+    "text": "Digital Downloads",
+    "cat": "Certificates > Digital Downloads",
+    "icon": "fa fa-fw fa-lg fa-cloud-download"
+  }, {
+    "text": "Software",
+    "cat": "Certificates > Software",
+    "icon": "fa fa-fw fa-lg fa-certificate"
+  }, {
+    "text": "General Labor",
+    "cat": "Certificates > General Labor",
+    "icon": "fa fa-fw fa-lg fa-certificate"
+  }, {
+    "text": "Game Codes",
+    "cat": "Certificates > Game Codes",
+    "icon": "fa fa-fw fa-lg fa-gamepad"
+  }, {
+    "text": "Company Shares",
+    "cat": "Certificates > Company Shares",
+    "icon": "fa fa-fw fa-lg fa-certificate"
+  }, {
+    "text": "Gift Cards",
+    "cat": "Certificates > Gift Cards",
+    "icon": "fa fa-fw fa-lg fa-gift"
+  }]
+}]
